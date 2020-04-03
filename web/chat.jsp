@@ -18,12 +18,30 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="home.html">Chat App</a>
+    <ul class="navbar-nav mr-auto d-flex flex-row justfiy-content-start">
+        <li class="nav-item active mr-3">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Friends</a>
+        </li>
+    </ul>
+    <div class="form-inline my-2 my-lg-0">
+        <input id="name" name="name" class="form-control mr-sm-2" type="search" placeholder="Name" aria-label="Search">
+        <button id="addfriend" class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+    </div>
+    <form method="post" action="Controller?command=Logout" class="form-inline my-2 my-lg-0">
+        <button id="logout" class="btn btn-info ml-3" type="submit">logout</button>
+    </form>
+</nav>
 <h1 id="h1" class="d-flex justify-content-center">${friend.name}</h1>
 <main class="messaging d-flex flex-row" >
-    <div id="friends" class="d-flex flex-column border rounded">
+    <div id="friends" class="d-flex flex-column border rounded w-25">
         <c:forEach var="friend" items="${sessionScope.user.friendlist}">
-        <div>
-            <p>${friend.name}</p>
+        <div class="friend border-dark">
+            <a class="" href="Controller?command=GoToChat&friend=${friend.name}">${friend.name}</a>
         </div>
         </c:forEach>
     </div>

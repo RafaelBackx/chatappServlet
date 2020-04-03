@@ -100,3 +100,11 @@ ul.messages .right:after {
 ul.messages .right:before {
     border-left-color: transparent;
 }
+.friend{
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.friend a{
+    padding-left: 5px;
+}

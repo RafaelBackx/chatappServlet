@@ -20,9 +20,7 @@ public class Chat extends Requesthandler {
         List<Message> messageHistory = new ArrayList<>();
         messageHistory.addAll(sessionUser.getMessages(friend));
         messageHistory.addAll(friend.getMessages(sessionUser));
-        System.out.println(messageHistory);
         Collections.sort(messageHistory);
-        System.out.println(messageHistory);
         response.getWriter().write(toJson(messageHistory,sessionUser));
     }
 

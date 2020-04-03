@@ -20,8 +20,9 @@ public class Login extends Requesthandler {
         if (u!=null){
             u.setStatus(Status.ONLINE);
             session.setAttribute("user",u);
+            response.sendRedirect("Controller?command=Home");
+        }else{
+            request.getRequestDispatcher("index.jsp").forward(request,response);
         }
-        request.setAttribute("statuses", Status.values());
-        request.getRequestDispatcher("home.jsp").forward(request,response);
     }
 }

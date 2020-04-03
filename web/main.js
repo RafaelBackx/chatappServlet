@@ -105,6 +105,6 @@ function clearTable(){
  function addfriend(){
      clearTimeout(timeoutid);
      xhr.open('POST','Controller?command=AddFriend&name='+document.getElementById('name').value);
+     xhr.onreadystatechange = showFriends;
      xhr.send(null);
-     getFriendlist();
  }

@@ -14,10 +14,12 @@ function send(e){
         dataType: "json",
         success: showMessages
     });
+    $('#input')[0].value = "";
 }
 
 function showMessages(json){
-    $('.m').remove();
+    $('.right').remove();
+    $('.left').remove();
     for (let message in json){
         console.log(json[message].data);
         let m = $("<li></li>").text(json[message].data);

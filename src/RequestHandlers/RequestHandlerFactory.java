@@ -4,7 +4,7 @@ public class RequestHandlerFactory {
     public static Requesthandler createHandler(String command) {
         if (command.equalsIgnoreCase("")){
             try {
-                Requesthandler handler = (Requesthandler) Home.class.newInstance();
+                Requesthandler handler = (Requesthandler) Index.class.newInstance();
                 return handler;
             } catch (IllegalAccessException e) {
                 e.printStackTrace();
