@@ -4,6 +4,8 @@ $(document).ready(function () {
         getMessages();
     }
     $('#hidebutton').on("click",hide);
+    $('#send').on('click',send)
+    getMessages();
 });
 
 function send(e){
