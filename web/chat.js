@@ -1,6 +1,9 @@
 $(document).ready(function () {
-    $('#send').on('click',send)
-    getMessages();
+    $('#send').on('click',send);
+    if ($('#h1')[0].innerText !== ""){
+        getMessages();
+    }
+    $('#hidebutton').on("click",hide);
 });
 
 function send(e){
@@ -36,4 +39,9 @@ function getMessages(){
         dataType: "json",
         success:showMessages
     });
+}
+function hide(){
+    console.log("pls work");
+    let options = {to:{width:200,height:60}};
+    $('#friends').toggle('slide',options,500);
 }

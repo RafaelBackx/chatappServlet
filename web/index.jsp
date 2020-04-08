@@ -13,10 +13,10 @@
   <a class="navbar-brand" href="home.html">Chat App</a>
   <ul class="navbar-nav mr-auto d-flex flex-row justfiy-content-start">
     <li class="nav-item active mr-3">
-      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-link" href="Controller?command=Home">Home <span class="sr-only">(current)</span></a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Friends</a>
+      <a class="nav-link" href="Controller?command=GoToChat">Chat</a>
     </li>
   </ul>
   <form class="form-inline my-2 my-lg-0">
